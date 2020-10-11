@@ -1,0 +1,16 @@
+{% extends 'main/head.html' %}
+
+{% block content %}
+    <br>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button style="background-color:#F4EB16; color:blue" class="btn btn-outline-info" type="submit">Login</button>
+    </form>
+
+    If you don't have an account then <a href="/register" target = "_self"><strong>Register</strong></a> now.
+    <br></br>
+    Forget Password then <a href = "/admin/password_reset/"><strong>RESET</strong></a>.
+
+
+{% endblock %}
